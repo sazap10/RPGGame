@@ -4,3 +4,9 @@
 *.jar
 *.war
 *.ear
+build/
+bin/
+.settings/
+.classpath
+.project
+build.fxbuild
