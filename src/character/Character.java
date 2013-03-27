@@ -6,14 +6,15 @@ package character;
 import javafx.scene.image.ImageView;
 
 /**
- * @author Sachin
- * Character class acts as the base for all characters in the game
- * Contains attributes present in all characters
+ * @author Sachin 
+ * @description 
+ *  Character class acts as the base for all characters in the
+ *  game Contains attributes present in all characters
  */
-public class Character extends ImageView{
+public class Character extends ImageView {
 	String name;
 	String sex;
-	/* 
+	/*
 	 * Attributes
 	 */
 	int HP;
@@ -23,5 +24,5 @@ public class Character extends ImageView{
 	/*
 	 * End Attributes
 	 */
-	
+
 }
