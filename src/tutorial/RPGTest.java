@@ -25,6 +25,7 @@ import javafx.scene.shape.RectangleBuilder;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+
 /**
  * 
  */
@@ -51,8 +52,8 @@ public class RPGTest extends Application {
 		setUpSprites();
 		setUpObstacles();
 		setUpKeyBoardEvents(primaryStage);
-		level = new ImageView("home1.png");
-		player = new ImageView("down1.png");
+		level = new ImageView("tutorial/images/home1.png");
+		player = new ImageView("tutorial/images/down1.png");
 		player.layoutXProperty().bind(posx);
 		player.layoutYProperty().bind(posy);
 		// player.relocate(320, 80);
@@ -209,10 +210,10 @@ public class RPGTest extends Application {
 		leftSprites = new ArrayList<>();
 		rightSprites = new ArrayList<>();
 		for (int i = 0; i <= 2; i++) {
-			upSprites.add(new Image("up" + i + ".png"));
-			downSprites.add(new Image("down" + i + ".png"));
-			leftSprites.add(new Image("left" + i + ".png"));
-			rightSprites.add(new Image("right" + i + ".png"));
+			upSprites.add(new Image("tutorial/images/up" + i + ".png"));
+			downSprites.add(new Image("tutorial/images/down" + i + ".png"));
+			leftSprites.add(new Image("tutorial/images/left" + i + ".png"));
+			rightSprites.add(new Image("tutorial/images/right" + i + ".png"));
 		}
 	}
 
