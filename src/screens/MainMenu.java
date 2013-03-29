@@ -3,6 +3,7 @@
  */
 package screens;
 
+import main.RPGGame;
 import javafx.animation.FadeTransition;
 import javafx.animation.FadeTransitionBuilder;
 import javafx.animation.ParallelTransition;
@@ -19,6 +20,7 @@ import javafx.util.Duration;
 
 /**
  * @author Sachin
+ * @
  *
  */
 public class MainMenu extends AnchorPane{
@@ -27,14 +29,15 @@ public class MainMenu extends AnchorPane{
 	ImageView first,second,title;
 	FlowPane buttonPane;
 	Button newGame, loadGame, quitGame;
+	RPGGame game;
 
-	public MainMenu(){
+	public MainMenu(RPGGame game){
 		Pane pane = new Pane();
 		first = new ImageView("media/first.jpg");
 		second = new ImageView("media/second.png");
 		title = new ImageView("media/title.png");
 		title.relocate(100, -9);
-		
+		this.game = game;
 		buttonPane = new FlowPane(Orientation.VERTICAL,0,20);
 		buttonPane.setPrefHeight(200);
 		buttonPane.setPrefWidth(200);
@@ -98,27 +101,26 @@ public class MainMenu extends AnchorPane{
 		newGame = new Button("New Game");
 		newGame.setPrefHeight(50);
 		newGame.setPrefWidth(200);
-		
 		newGame.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO set the scene as the character creation one
+				game.switchToCharCreation();
 			}});
 		
 		loadGame = new Button("Load Game");
 		loadGame.setPrefHeight(50);
 		loadGame.setPrefWidth(200);
-		
 		loadGame.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				// TODO set the scene as load game one
+				game.switchToLoadGame();
 			}});
 		
 		quitGame = new Button("Quit");
 		quitGame.setPrefHeight(50);
 		quitGame.setPrefWidth(200);
-		
 		quitGame.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
