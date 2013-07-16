@@ -1,16 +1,16 @@
 package main;
 
+import screens.CharCreation;
 import screens.MainMenu;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class RPGGame extends Application {
 	Pane root;
 	MainMenu mainMenu;
-	
+	CharCreation charCreation;
 	
 
 	@Override
@@ -19,7 +19,7 @@ public class RPGGame extends Application {
 		root = new Pane();
 		
 		mainMenu = new MainMenu(this);
-		
+		charCreation = new CharCreation(this);
 		switchToMainMenu();
 		
 		Scene scene = new Scene(root,800,600);
@@ -35,9 +35,8 @@ public class RPGGame extends Application {
 	}
 	
 	public void switchToCharCreation(){
-		//root.getChildren().clear();
-		//add char creation here
-		//not implemented
+		root.getChildren().clear();
+		root.getChildren().add(charCreation);
 
 	}
 	
